@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import RobotsContainer from "./RobotsContainer";
 
 const textVariants = {
   initial: {
@@ -31,7 +32,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -74,7 +75,7 @@ const Hero = () => {
         Writer Content Creator Influencer
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt="" />
+        <RobotsContainer />
       </div>
     </div>
   );

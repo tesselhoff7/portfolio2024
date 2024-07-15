@@ -27,7 +27,7 @@ export default function Model(props) {
       ref={group}
       {...props}
       dispose={null}
-      scale={[12, 12, 12]}
+      scale={[11, 11, 11]}
       position={[0, 0, 0]}
     >
       <group name="Scene">

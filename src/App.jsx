@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Test from "./Test";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
@@ -9,6 +10,32 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
 
 const App = () => {
+  useEffect(() => {
+    const handleWheel = (event) => {
+      if (event.deltaY !== 0) {
+        event.preventDefault();
+        const scrollSnapType = getComputedStyle(
+          document.documentElement
+        ).scrollSnapType;
+        if (scrollSnapType.includes("mandatory")) {
+          const scrollAmount =
+            event.deltaY > 0 ? window.innerHeight : -window.innerHeight;
+          window.scrollBy({
+            top: scrollAmount,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
     <div>
       <Cursor />
@@ -19,19 +46,16 @@ const App = () => {
       <section id="Services">
         <Parallax type="services" />
       </section>
-      <section>
+      {/*<section>
         <Services />
-      </section>
-      <section id="Portfolio">
+      </section>*/}
+      {/*<section id="Portfolio">
         <Parallax type="portfolio" />
-      </section>
+      </section>*/}
       <Portfolio />
       <section id="Contact">
         <Contact />
       </section>
-      {/* Framer Motion Crash Course */}
-      {/* <Test/>
-    <Test/> */}
     </div>
   );
 };

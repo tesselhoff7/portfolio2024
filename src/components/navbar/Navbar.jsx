@@ -6,16 +6,16 @@ const Navbar = () => {
   return (
     <div className="navbar">
       {/* Sidebar */}
-      <Sidebar/>
+      <Sidebar />
       <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
+          Welcome
         </motion.span>
-        <div className="social">
+        {/*<div className="social">
           <a href="#">
             <img src="/facebook.png" alt="" />
           </a>
@@ -28,7 +28,7 @@ const Navbar = () => {
           <a href="#">
             <img src="/dribbble.png" alt="" />
           </a>
-        </div>
+        </div>*/}
       </div>
     </div>
   );

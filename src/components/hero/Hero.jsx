@@ -48,10 +48,8 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Web developer and UI designer
-          </motion.h1>
+          <motion.h2 variants={textVariants}>Viacheslav Pak / 박승현</motion.h2>
+          <motion.h1 variants={textVariants}>Frontend developer</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the Latest Works
@@ -72,8 +70,9 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        Frontend Web / Mobile developer
       </motion.div>
+
       <div className="imageContainer">
         <RobotsContainer />
       </div>

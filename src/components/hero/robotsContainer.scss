@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .robot-container {
   display: flex;
   justify-content: center;
@@ -9,17 +11,11 @@
 
   canvas {
     display: block;
-    //width: 400px !important;
-  }
+    width: 400px !important;
 
-  .greetings {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: #fff;
-    text-align: center;
-    z-index: 1;
+    @include mobile {
+      width: 100% !important;
+      height: 400px !important;
+    }
   }
 }

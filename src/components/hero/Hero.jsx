@@ -63,7 +63,11 @@ const Hero = () => {
             alt=""
           />
         </motion.div>
+        <div className="robotContainer">
+          <RobotsContainer />
+        </div>
       </div>
+
       <motion.div
         className="slidingTextContainer"
         variants={sliderVariants}
@@ -73,9 +77,9 @@ const Hero = () => {
         Frontend Web / Mobile developer
       </motion.div>
 
-      <div className="imageContainer">
+      {/*<div className="imageContainer">
         <RobotsContainer />
-      </div>
+      </div>*/}
     </div>
   );
 };

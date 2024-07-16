@@ -6,7 +6,7 @@ const items = [
   {
     id: 1,
     title: "Gideb",
-    img: "../../../public/gideb.png",
+    img: "../../../public/gideb2.png",
     link: "https://gideb.com",
     desc: "Self-Care Tools for Mental Health. React Native, React, Firebase",
   },
@@ -39,7 +39,11 @@ const Single = ({ item }) => {
     <section>
       <div className="container">
         <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
+          <div
+            className="imageContainer"
+            style={{ border: "1px solid red" }}
+            ref={ref}
+          >
             <img src={item.img} alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>

@@ -5,24 +5,24 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
+    title: "Keojak",
+    img: "../../../public/keojak.png",
+    link: "https://keojak.com/",
+    desc: "Mobile Community App for café owners and barista. React Native, React, MongoDB, Moleculer, Firebase, Google Maps API",
+  },
+  {
+    id: 2,
     title: "Gideb",
     img: "../../../public/gideb2.png",
     link: "https://gideb.com",
     desc: "Self-Care Tools for Mental Health. React Native, React, Firebase",
   },
   {
-    id: 2,
+    id: 3,
     title: "Herbee",
     img: "../../../public/herbee.png",
     link: "https://www.herbee.co.kr/",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
-  {
-    id: 3,
-    title: "Keojak",
-    img: "../../../public/keojak.png",
-    link: "https://keojak.com/",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "Mobile Meet-up App. React Native, React, Firebase, Google Maps API, Insomnia",
   },
 ];
 

@@ -31,14 +31,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_h86z4hf",
+        "template_qm0oeig",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "37S7AaHA4J6OGs3QA"
       )
       .then(
         (result) => {
           setSuccess(true);
+          alert("Email sent successfully!");
         },
         (error) => {
           setError(true);

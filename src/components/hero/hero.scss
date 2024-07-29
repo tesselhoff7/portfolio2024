@@ -19,9 +19,16 @@
     }
 
     .robotContainer {
+      position: relative;
       display: flex;
+
       justify-content: center;
       align-items: center;
+
+      .rotate-icons {
+        position: absolute;
+        bottom: 280px;
+      }
     }
 
     .textContainer {

@@ -16,8 +16,10 @@
     "@react-three/postprocessing": "^2.7.0",
     "@types/three": "^0.149.0",
     "framer-motion": "^10.18.0",
+    "i18next": "^23.12.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^15.0.0",
     "sass": "^1.68.0",
     "three": "^0.145.0"
   },

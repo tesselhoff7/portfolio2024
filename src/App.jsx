@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
+import "./utils/i18n";
 
 const App = () => {
   useEffect(() => {
@@ -37,7 +38,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div id="lang-version">
       <Cursor />
       <section id="Homepage">
         <Navbar />

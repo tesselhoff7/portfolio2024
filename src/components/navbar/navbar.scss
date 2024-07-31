@@ -11,6 +11,23 @@
     justify-content: space-between;
     height: 100%;
 
+    .lang-btn-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      .lang-button {
+        all: unset;
+        //width: 80px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
     @include mobile {
       justify-content: flex-end;
       padding: 20px;

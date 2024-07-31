@@ -53,9 +53,19 @@ const Navbar = () => {
             <img src="/dribbble.png" alt="" />
           </a>
         </div>*/}
-        <div>
-          <span onClick={() => i18n.changeLanguage("en")}>ENG</span>
-          <span onClick={() => i18n.changeLanguage("kr")}>KOR</span>
+        <div className="lang-btn-container">
+          <button
+            className="lang-button"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            ENG
+          </button>
+          <button
+            className="lang-button"
+            onClick={() => i18n.changeLanguage("kr")}
+          >
+            KOR
+          </button>
         </div>
       </div>
     </div>

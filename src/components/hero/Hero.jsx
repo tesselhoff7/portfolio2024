@@ -1,6 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
 import RobotsContainer from "./RobotsContainer";
+import { useTranslation } from "react-i18next";
 
 const textVariants = {
   initial: {
@@ -39,6 +40,8 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -48,16 +51,18 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Viacheslav Pak / 박승현</motion.h2>
-          <motion.h1 variants={textVariants}>Frontend developer</motion.h1>
+          <motion.h2 variants={textVariants}>{t("myName")}</motion.h2>
+          <motion.h1 variants={textVariants}>{t("jobTitle")}</motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.a href="#Services">
               <motion.button variants={textVariants}>
-                See the Latest Works
+                {t("latestWork")}
               </motion.button>
             </motion.a>
             <motion.a href="#Contact">
-              <motion.button variants={textVariants}>Contact Me</motion.button>
+              <motion.button variants={textVariants}>
+                {t("contactMe")}
+              </motion.button>
             </motion.a>
           </motion.div>
           <motion.img

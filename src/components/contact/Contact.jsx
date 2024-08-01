@@ -29,20 +29,26 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log(formRef.current);
+
     emailjs
       .sendForm(
         "service_h86z4hf",
-        "template_qm0oeig",
+        "template_wtc4wek",
         formRef.current,
         "37S7AaHA4J6OGs3QA"
       )
       .then(
         (result) => {
-          setSuccess(true);
-          alert("Email sent successfully!");
+          console.log(result);
+          if (result.text === "OK") {
+            setSuccess(true);
+            alert("Email sent successfully!");
+          }
         },
         (error) => {
           setError(true);
+          alert("Failed to send email. Please try again later.");
         }
       );
   };
@@ -107,8 +113,8 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name" />
-          <input type="email" required placeholder="Email" name="email" />
+          <input type="text" required placeholder="Name" name="user_name" />
+          <input type="email" required placeholder="Email" name="user_email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
           {error && "Error"}
